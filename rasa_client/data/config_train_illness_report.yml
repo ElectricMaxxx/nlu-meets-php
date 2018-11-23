@@ -1,0 +1,41 @@
+language: "en"
+
+pipeline:
+- name: "nlp_spacy"
+  model: "de"
+- name: "tokenizer_spacy"
+- name: "ner_crf"
+- name: "intent_featurizer_spacy"
+- name: "intent_classifier_sklearn"
+
+data: |
+  ## intent:report_illness_duration
+  - I will stay home for [3 days](duration)
+  - I can not come the next [4 days](duration)
+  - I will stay in bed thee upcomming [5 days](duration)
+  ## intent:report_illness_from_to
+  - I will stay home until [friday](last)
+  - My doctor suggests me to stay home until [friday](last)
+  - I am ill from [monday](first) to [friday](last)
+  - I will be back on [friday](last)
+
+
+  ## lookup:duration
+  - 1 days
+  - 2 days
+  - a week
+
+  ## lookup:first
+  - monday
+  - thuesday
+  - wednessday
+  - thursday
+  - friday
+  
+
+  ## lookup:last
+  - monday
+  - thuesday
+  - wednessday
+  - thursday
+  - friday

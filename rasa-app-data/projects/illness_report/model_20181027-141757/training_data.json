@@ -1,0 +1,128 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "report_illness_duration",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "3 days",
+            "entity": "duration"
+          }
+        ],
+        "text": "I will stay home for 3 days"
+      },
+      {
+        "intent": "report_illness_duration",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "4 days",
+            "entity": "duration"
+          }
+        ],
+        "text": "I can not come the next 4 days"
+      },
+      {
+        "intent": "report_illness_duration",
+        "entities": [
+          {
+            "start": 34,
+            "end": 40,
+            "value": "5 days",
+            "entity": "duration"
+          }
+        ],
+        "text": "I will stay in bed thee upcomming 5 days"
+      },
+      {
+        "intent": "report_illness_from_to",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "friday",
+            "entity": "last"
+          }
+        ],
+        "text": "I will stay home until friday"
+      },
+      {
+        "intent": "report_illness_from_to",
+        "entities": [
+          {
+            "start": 41,
+            "end": 47,
+            "value": "friday",
+            "entity": "last"
+          }
+        ],
+        "text": "My doctor suggests me to stay home until friday"
+      },
+      {
+        "intent": "report_illness_from_to",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "monday",
+            "entity": "first"
+          },
+          {
+            "start": 24,
+            "end": 30,
+            "value": "friday",
+            "entity": "last"
+          }
+        ],
+        "text": "I am ill from monday to friday"
+      },
+      {
+        "intent": "report_illness_from_to",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "friday",
+            "entity": "last"
+          }
+        ],
+        "text": "I will be back on friday"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [
+      {
+        "name": "duration",
+        "elements": [
+          "1 days",
+          "2 days",
+          "a week"
+        ]
+      },
+      {
+        "name": "first",
+        "elements": [
+          "monday",
+          "thuesday",
+          "wednessday",
+          "thursday",
+          "friday"
+        ]
+      },
+      {
+        "name": "last",
+        "elements": [
+          "monday",
+          "thuesday",
+          "wednessday",
+          "thursday",
+          "friday"
+        ]
+      }
+    ],
+    "entity_synonyms": []
+  }
+}
